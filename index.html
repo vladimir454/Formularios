@@ -1,126 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario de Registro - Perro</title>
-    <link rel="stylesheet" href="css/estilos.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      h1 {
-        color: #4CAF50;
-        font-size: 2em;
-      }
-
-      form {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 400px;
-      }
-
-      .form-group {
-        margin-bottom: 15px;
-      }
-
-      label {
-        display: block;
-        font-size: 14px;
-        color: #333;
-        margin-bottom: 5px;
-      }
-
-      input[type="text"],
-      input[type="password"],
-      input[type="email"],
-      textarea,
-      select {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-
-      input[type="text"]:focus,
-      input[type="password"]:focus,
-      input[type="email"]:focus,
-      textarea:focus,
-      select:focus {
-        border-color: #4CAF50;
-        outline: none;
-        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-      }
-
-      textarea {
-        resize: vertical;
-      }
-
-      .form-group input[type="submit"],
-      .form-group input[type="reset"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 48%;
-        margin-right: 4%;
-      }
-
-      .form-group input[type="reset"] {
-        background-color: #f44336;
-      }
-
-      .form-group input[type="submit"]:hover,
-      .form-group input[type="reset"]:hover {
-        opacity: 0.9;
-      }
-
-      /* Estilo responsivo */
-      @media (max-width: 600px) {
-        form {
-          padding: 15px;
-        }
-        .form-group input[type="submit"],
-        .form-group input[type="reset"] {
-          width: 100%;
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
+    <title>Formulario de Registro - Caninos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+<body>
     <header>
-      <h1>Formulario de Registro - Perro</h1>
+        <h1>Formulario de Registro - Caninos</h1>
     </header>
     <main>
-      <article>
-        <form action="">
-          <div class="container">
-            <div class="form-group">
-              <label for="nombre">Nombre del Perro:</label>
-              <input type="text" id="nombre" name="nombre" required />
-            </div>
+        <article>
+            <form action="">
+                <div class="container">
+                    <div class="form-group">
+                        <label for="nombre">Nombre del animalito:</label>
+                        <input type="text" id="nombre" name="nombre" required />
+                    </div>
 
-            <div class="form-group">
-              <label for="raza">Raza del Perro:</label
+                    <div class="form-group">
+                        <label for="edad">Edad del animalito (en años):</label>
+                        <input type="number" id="edad" name="edad" min="0" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="raza">Raza del animalito:</label>
+                        <input type="text" id="raza" name="raza" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color">Color del Pelaje:</label>
+                        <input type="text" id="color" name="color" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios Adicionales:</label>
+                        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Registrar " />
+                        <input type="reset" value="Limpiar " />
+                    </div>
+                </div>
+            </form>
+        </article>
+    </main>
+</body>
+</html>

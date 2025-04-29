@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/pastoraleman.jfif'); /* Ruta a la imagen de fondo */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    margin: 0;
+    padding: 20px; /* Añadimos un poco de padding general */
+    display: flex;
+    flex-direction: column; /* Para que el header esté encima del main */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    min-height: 100vh; /* Asegurar que el body ocupe al menos toda la altura de la pantalla */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px; /* Aumentamos el margen inferior */
+    width: 100%; /* Para que ocupe todo el ancho */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejor legibilidad */
+    padding: 15px 0;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #a0522d; /* Café tierra */
+    font-size: 2.5em; /* Un poco más grande */
+    margin-top: 0; /* Eliminar margen superior innecesario */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    flex-grow: 1; /* Permite que el main crezca y empuje el footer hacia abajo si hubiera uno */
+}
+
+article {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el formulario */
+    padding: 25px; /* Un poco más de padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Más espacio entre los campos */
+}
+.input:focus{
+    background-color: #8b4513;
+    color: aqua;
+}
+label {
+    display: block;
+    font-size: 16px; /* Un poco más grande */
+    color: #774a33; /* Café más oscuro */
+    margin-bottom: 8px;
+    font-weight: bold; /* Resaltar las etiquetas */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: calc(100% - 16px); /* Ajuste para el padding */
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #d2b48c; /* Café claro para el borde */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Espacio inferior para mejor visualización */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #a0522d; /* Café tierra al enfocar */
+    outline: none;
+    box-shadow: 0 0 5px rgba(160, 82, 45, 0.5); /* Sombra al enfocar */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-group input[type="submit"],
+.form-group input[type="reset"] {
+    background-color: #a0522d; /* Café tierra para los botones */
+    color: white;
+    padding: 12px 18px; /* Más padding en los botones */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(48% - 4px); /* Ajuste para el margen entre botones */
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.form-group input[type="reset"] {
+    background-color: #8b4513; /* Café siena para el botón de reset */
+    margin-right: 0; /* Eliminar margen derecho del botón de reset */
+}
+
+.form-group input[type="submit"]:hover,
+.form-group input[type="reset"]:hover {
+    opacity: 0.8;
+}
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    header {
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    form {
+        padding: 20px;
+    }
+    .form-group input[type="submit"],
+    .form-group input[type="reset"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
